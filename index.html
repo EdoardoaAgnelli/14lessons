@@ -28,7 +28,12 @@
   $(function() {
     $.ajax({
     url: 'http://edoardoaagnelli.github.io/14lessons/main.html',
-    success: function(){
+    success: function(data, second){
+      console.log(arguments);
+      console.log(data);
+      console.log(second);
+      $('.site-footer').html(data)
+
         alert('Load was performed.');
   }
   });
